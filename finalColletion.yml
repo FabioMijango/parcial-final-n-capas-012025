@@ -1,0 +1,282 @@
+type: collection.insomnia.rest/5.0
+name: ParcialFinalCapas
+meta:
+  id: wrk_22e41e7b60444d9295fdc6602a8a0eed
+  created: 1752023984895
+  modified: 1752023984895
+  description: ""
+collection:
+  - url: http://localhost:8080/api/users
+    name: Register
+    meta:
+      id: req_1a1a2bf81bfe4f90aae7ab7c424ffffe
+      created: 1752023987700
+      modified: 1752028612558
+      isPrivate: false
+      description: ""
+      sortKey: -1752023987701
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "nombre": "Tech",
+          "correo": "juan5@example.com",
+          "password": "1234",
+          "nombreRol": "USER"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.2.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/auth/login
+    name: Login tech
+    meta:
+      id: req_70cd88b15d52481587b1e42c87873c6b
+      created: 1752024050847
+      modified: 1752028567200
+      isPrivate: false
+      description: ""
+      sortKey: -1752024050847
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "correo": "tech2@soporte.com",
+          "password": "1234"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.2.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/users/all
+    name: userss
+    meta:
+      id: req_cdd154586cde45a28278240f2073bf9e
+      created: 1752025741121
+      modified: 1752028606471
+      isPrivate: false
+      description: ""
+      sortKey: -1752025741121
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.2.0
+        id: pair_88c6b5015ea442beb08f74cb0b8b1110
+      - id: pair_367d80e2df334302861957c888cecaa3
+        name: Authorization
+        value: Bearer
+          eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0ZWNoMkBzb3BvcnRlLmNvbSIsInJvbGUiOiJURUNIIiwiaWF0IjoxNzUyMDI2NjY4LCJleHAiOjE3NTIwNjI2Njh9.1yQgBbbH-6QjWwcs878XjgYmEAonT2yFBKQB-rNEDUqouUS7eMOTvRpyrI6SCXTB
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/auth/login
+    name: Login user1
+    meta:
+      id: req_af067a0227f44a1cbbc6765bd937773f
+      created: 1752025892893
+      modified: 1752028070795
+      isPrivate: false
+      description: ""
+      sortKey: -1752024019274
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "correo": "juan@example.com",
+          "password": "1234"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.2.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/tickets
+    name: create tiket
+    meta:
+      id: req_aedccbaa5a8d40a3a9a1707afefd6cf0
+      created: 1752027715944
+      modified: 1752028593836
+      isPrivate: false
+      description: ""
+      sortKey: -1752024895984
+    method: POST
+    body:
+      mimeType: application/json
+      text: |+
+        {
+          "titulo": "El sistema está caído",
+          "descripcion": "No puedo acceder desde ayer",
+          "estado": "PENDIENTE",
+          "correoUsuario": "tech2@soporte.com",
+          "correoSoporte": "tech2@soporte.com"
+        }
+
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_35adb7abd10946e1a0702fd6c29b3f0a
+      - name: User-Agent
+        value: insomnia/11.2.0
+        id: pair_88c6b5015ea442beb08f74cb0b8b1110
+      - id: pair_367d80e2df334302861957c888cecaa3
+        name: Authorization
+        value: Bearer
+          eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJqdWFuNUBleGFtcGxlLmNvbSIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzUyMDI4MDkwLCJleHAiOjE3NTIwNjQwOTB9.eQW_nYxMQYtw4yE7hvudd7CcdchCgvLN4nphhF3xsCp5uCM1J3XSpc-EK9XIP4xA
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/tickets/1
+    name: get ticker only User
+    meta:
+      id: req_cb8289b697ef40d08dd50ea742d2f55c
+      created: 1752027970166
+      modified: 1752028099078
+      isPrivate: false
+      description: ""
+      sortKey: -1752025318552.5
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.2.0
+        id: pair_88c6b5015ea442beb08f74cb0b8b1110
+      - id: pair_367d80e2df334302861957c888cecaa3
+        name: Authorization
+        value: Bearer
+          eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJqdWFuNUBleGFtcGxlLmNvbSIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzUyMDI4MDkwLCJleHAiOjE3NTIwNjQwOTB9.eQW_nYxMQYtw4yE7hvudd7CcdchCgvLN4nphhF3xsCp5uCM1J3XSpc-EK9XIP4xA
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/auth/login
+    name: Login user2
+    meta:
+      id: req_86a0888cd1fd465d944169dbfa91c714
+      created: 1752028074737
+      modified: 1752028179481
+      isPrivate: false
+      description: ""
+      sortKey: -1752024003487.5
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "correo": "juan5@example.com",
+          "password": "1234"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.2.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/tickets
+    name: put tiket only by tech
+    meta:
+      id: req_76268d7dc2934c179f396d8712095594
+      created: 1752028303563
+      modified: 1752028574228
+      isPrivate: false
+      description: ""
+      sortKey: -1752024473415.5
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |+
+        {
+            "id": 1,
+            "estado": "EN_PROCESO",
+            "correoSoporte": "tech2@soporte.com"
+        }
+
+
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_35adb7abd10946e1a0702fd6c29b3f0a
+      - name: User-Agent
+        value: insomnia/11.2.0
+        id: pair_88c6b5015ea442beb08f74cb0b8b1110
+      - id: pair_367d80e2df334302861957c888cecaa3
+        name: Authorization
+        value: Bearer
+          eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0ZWNoMkBzb3BvcnRlLmNvbSIsInJvbGUiOiJURUNIIiwiaWF0IjoxNzUyMDI4NTY3LCJleHAiOjE3NTIwNjQ1Njd9.FrQbPqPZmQqiDjfevJcnyaymoLdKo62IGeF5NqFLaeVvHzqPbGhxldOfJQtpEwV1
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_8f845277d9f7da661dea26a03fca11c51d8ddcfc
+    created: 1752023984903
+    modified: 1752023984903
+environments:
+  name: Base Environment
+  meta:
+    id: env_8f845277d9f7da661dea26a03fca11c51d8ddcfc
+    created: 1752023984900
+    modified: 1752023984900
+    isPrivate: false
