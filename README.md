@@ -12,6 +12,12 @@ Este repositorio contiene un proyecto para evaluar y practicar los conceptos de 
 1. Clonar
 2. En la raiz del proyecto ejecutar en consola "docker-compose up"
 
+## 📄 Evidencia de Pruebas
+
+Puedes revisar la evidencia de funcionamiento en el siguiente archivo PDF:  
+👉 [Ver evidencia.pdf](https://github.com/FabioMijango/parcial-final-n-capas-012025/blob/master/Pruebas.pdf)
+
+
 ## Sistema de Soporte Técnico
 
 ### Descripción
